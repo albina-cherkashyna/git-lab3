@@ -15,5 +15,8 @@
     "url": "https://github.com/albina-cherkashyna/git-lab3/issues"
   },
   "homepage": "https://github.com/albina-cherkashyna/git-lab3#readme",
-  "description": ""
+  "description": "",
+  "dependencies": {
+    "express": "^5.1.0"
+  }
 }
