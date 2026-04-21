@@ -1,9 +1,8 @@
-import { sql } from 'drizzle-orm';
-import { integer, pgTable, serial, varchar, timestamp } from 'drizzle-orm/pg-core';
+const { sql } = require('drizzle-orm');
+const { integer, pgTable, serial, varchar, timestamp } = require('drizzle-orm/pg-core');
 
 
-export const users = pgTable('users', {
-
+const users = pgTable('users', {
    id: serial('id').primaryKey(),
    name: varchar('name', { length: 256 }),
    email: varchar('email', { length: 256 }),
@@ -12,8 +11,7 @@ export const users = pgTable('users', {
 });
 
 
-export const products = pgTable('products', {
-
+const products = pgTable('products', {
    id: serial('id').primaryKey(),
    name: varchar('name', { length: 256 }),
    brand: varchar('brand', { length: 256 }),
@@ -21,3 +19,10 @@ export const products = pgTable('products', {
    createdAt: timestamp('created_at').default(sql`CURRENT_TIMESTAMP`)
 
 });
+
+
+module.exports = {
+   users,
+   products
+}
+

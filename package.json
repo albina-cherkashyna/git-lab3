@@ -1,11 +1,10 @@
 {
   "name": "git-lab3",
   "version": "1.0.0",
-  "type": "module",
   "main": "src/index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "server": "node src/index.js",
+    "server": "node --watch src/index.js",
     "migration:generate": "drizzle-kit generate",
     "migration:push": "drizzle-kit push"
   },
@@ -21,11 +20,12 @@
   "homepage": "https://github.com/albina-cherkashyna/git-lab3#readme",
   "description": "",
   "dependencies": {
+    "body-parser": "^2.2.2",
     "drizzle-orm": "^0.41.0",
     "express": "^5.1.0",
-    "pg": "^8.14.1"
+    "pg": "^8.20.0"
   },
   "devDependencies": {
-    "drizzle-kit": "^0.30.5"
+    "drizzle-kit": "^0.30.6"
   }
 }
